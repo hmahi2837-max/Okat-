@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,136 +7,60 @@
   <title>HASNAIN</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: radial-gradient(circle at top, #1a1a2e, #0f0f1e);
-      height: 100vh;
-      overflow: hidden;
-      font-family: 'Rajdhani', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
+      height: 100vh; overflow: hidden; font-family: 'Rajdhani', sans-serif;
+      display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;
     }
     .name-animation {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 4rem;
-      font-weight: 900;
-      position: relative;
-      top: -200px;
-      animation: slideDown 2s ease-out forwards;
+      font-family: 'Orbitron', sans-serif; font-size: 4rem; font-weight: 900;
+      position: relative; top: -200px; animation: slideDown 2s ease-out forwards;
       background: linear-gradient(45deg, #ff4d6d, #ff758f, #ffd6e0, #ff4d6d);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background-size: 300% 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       animation: slideDown 2s ease-out forwards, gradientMove 3s ease infinite;
       filter: drop-shadow(0 0 20px #ff4d6d);
     }
-    .heart {
-      font-size: 2.5rem;
-      animation: pulse 1.5s infinite;
-      margin: 15px 0;
-      filter: drop-shadow(0 0 15px #ff4d6d);
-    }
-    @keyframes slideDown {
-      to { top: 0; }
-    }
-    @keyframes gradientMove {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.4); }
-    }
+    .heart { font-size: 2.5rem; animation: pulse 1.5s infinite; margin: 15px 0; filter: drop-shadow(0 0 15px #ff4d6d); }
+    @keyframes slideDown { to { top: 0; } }
+    @keyframes gradientMove { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.4); } }
     #pic {
-      width: 0px;
-      height: 0px;
-      border-radius: 25px;
-      margin: 20px 0;
-      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      object-fit: cover;
-      border: 3px solid #ff4d6d;
-      box-shadow: 0 0 40px rgba(255, 77, 109, 0.8), 0 0 80px rgba(255, 77, 109, 0.4);
+      width: 0px; height: 0px; border-radius: 25px; margin: 20px 0;
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); object-fit: cover;
+      border: 3px solid #ff4d6d; box-shadow: 0 0 40px rgba(255, 77, 109, 0.8), 0 0 80px rgba(255, 77, 109, 0.4);
       display: none;
     }
-    #pic.show {
-      display: block;
-    }
+    #pic.show { display: block; }
     .size-small { width: 180px; height: 180px; }
     .size-large { width: 320px; height: 320px; }
-    
     #btn {
-      font-family: 'Orbitron', sans-serif;
-      padding: 18px 35px;
-      font-size: 1.3rem;
-      font-weight: 700;
-      background: linear-gradient(45deg, #ff4d6d, #ff006e);
-      border: 2px solid #ff758f;
-      border-radius: 50px;
-      color: white;
-      cursor: pointer;
-      margin-top: 25px;
+      font-family: 'Orbitron', sans-serif; padding: 18px 35px; font-size: 1.3rem; font-weight: 700;
+      background: linear-gradient(45deg, #ff4d6d, #ff006e); border: 2px solid #ff758f;
+      border-radius: 50px; color: white; cursor: pointer; margin-top: 25px;
       box-shadow: 0 0 20px rgba(255, 77, 109, 0.6), inset 0 0 20px rgba(255,255,255,0.1);
-      transition: 0.3s;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      transition: 0.3s; text-transform: uppercase; letter-spacing: 2px;
     }
-    #btn:hover {
-      transform: scale(1.08) translateY(-2px);
-      box-shadow: 0 0 40px rgba(255, 77, 109, 0.9), inset 0 0 20px rgba(255,255,255,0.2);
-    }
+    #btn:hover { transform: scale(1.08) translateY(-2px); box-shadow: 0 0 40px rgba(255, 77, 109, 0.9), inset 0 0 20px rgba(255,255,255,0.2); }
     #message {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 25px 0;
-      min-height: 50px;
-      text-align: center;
-      padding: 0 20px;
-      text-shadow: 0 0 20px #ff4d6d, 0 0 40px #ff4d6d;
-      letter-spacing: 1px;
+      font-family: 'Rajdhani', sans-serif; font-size: 2rem; font-weight: 700; margin: 25px 0;
+      min-height: 50px; text-align: center; padding: 0 20px;
+      text-shadow: 0 0 20px #ff4d6d, 0 0 40px #ff4d6d; letter-spacing: 1px;
     }
-    .hearts-container, .emoji-rain {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .floating-heart, .falling-emoji {
-      position: absolute;
-      font-size: 1.8rem;
-      animation: floatUp 3s linear forwards;
-    }
-    .falling-emoji {
-      animation: emojiFall 4s linear forwards;
-    }
-    @keyframes floatUp {
-      0% { transform: translateY(100vh) scale(0) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(-10vh) scale(1.2) rotate(360deg); opacity: 0; }
-    }
-    @keyframes emojiFall {
-      0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
-    }
+    .hearts-container, .emoji-rain { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
+    .floating-heart, .falling-emoji { position: absolute; font-size: 1.8rem; animation: floatUp 3s linear forwards; }
+    .falling-emoji { animation: emojiFall 4s linear forwards; }
+    @keyframes floatUp { 0% { transform: translateY(100vh) scale(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(-10vh) scale(1.2) rotate(360deg); opacity: 0; } }
+    @keyframes emojiFall { 0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; } 100% { transform: translateY(110vh) rotate(720deg); opacity: 0; } }
   </style>
 </head>
 <body>
   <div class="hearts-container" id="heartsContainer"></div>
   <div class="emoji-rain" id="emojiRain"></div>
-  
   <div class="name-animation">HASNAIN</div>
   <div class="heart">❤️</div>
   
-  <img id="pic" src="hasnain.jpg" alt="Hasnain">
+  <img id="pic" src="./profile.jpg" alt="Hasnain">
   <div id="message"></div>
   <button id="btn">Hasnain ko dekhna hai to click karo</button>
 
@@ -153,7 +77,6 @@
       const randomSize = Math.random() > 0.5 ? 'size-large' : 'size-small';
       pic.classList.add(randomSize);
     }
-    
     function createHearts() {
       const hearts = ['❤️','💖','💕','💗','💓','💘','💝','❤️‍🩹','😍','🥰','💋','✨'];
       for(let i = 0; i < 40; i++) {
@@ -166,7 +89,6 @@
         setTimeout(() => heart.remove(), 3000);
       }
     }
-    
     function emojiRainFall() {
       const emojis = ['❤️','💖','💕','💗','💓','💘','💝','❤️‍🩹','😍','🥰','💋','✨','🔥','💯','🌟','💫','⚡','👑','🎯','💎'];
       for(let i = 0; i < 150; i++) {
@@ -181,10 +103,8 @@
         }, i * 20);
       }
     }
-
     btn.addEventListener('click', () => {
       clickCount++;
-      
       if(clickCount === 1) {
         createHearts();
         message.innerHTML = '';
@@ -221,6 +141,5 @@
       }
     });
   </script>
-  <img id="pic" src="./profile.jpg" alt="Hasnain">
 </body>
 </html>
